@@ -1,22 +1,21 @@
 package org.cyclopsgroup.kaufman.tests;
 
 import java.io.IOException;
-
 import org.junit.Test;
 
 public abstract class JaxbTypeVerifierTests {
-	private final JaxbTypeVerifier verifier;
+  private final JaxbTypeVerifier verifier;
 
-	protected JaxbTypeVerifierTests(JaxbTypeVerifier verifier) {
-		this.verifier = verifier;
-	}
+  protected JaxbTypeVerifierTests(JaxbTypeVerifier verifier) {
+    this.verifier = verifier;
+  }
 
-	public JaxbTypeVerifierTests() {
-		this(JaxbTypeVerifier.newDefaultInstance());
-	}
+  public JaxbTypeVerifierTests() {
+    this(JaxbTypeVerifier.newDefaultInstance());
+  }
 
-	@Test
-	public void testTypesInSamePackage() throws IOException {
-		verifier.verifyPackage(getClass().getPackage().getName());
-	}
+  @Test
+  public void testTypesInSamePackage() throws IOException {
+    verifier.verifyPackage(getClass().getPackage().getName());
+  }
 }
