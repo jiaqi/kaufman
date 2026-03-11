@@ -1,8 +1,7 @@
 package org.cyclopsgroup.kaufman.interfaces;
 
-public interface Transportable<T>
-{
-    T exportTo( T destination );
+public interface Transportable<T> {
+  T exportTo(T destination);
 
-    void importFrom( T source );
+  void importFrom(T source);
 }

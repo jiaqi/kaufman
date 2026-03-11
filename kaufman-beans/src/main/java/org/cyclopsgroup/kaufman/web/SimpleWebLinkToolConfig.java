@@ -6,41 +6,32 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-public class SimpleWebLinkToolConfig
-    implements WebLinkToolConfig
-{
-    private Set<Pattern> externalResourcePatterns;
+public class SimpleWebLinkToolConfig implements WebLinkToolConfig {
+  private Set<Pattern> externalResourcePatterns;
 
-    private String externalResourceUrl;
+  private String externalResourceUrl;
 
-    public Set<Pattern> getExternalResourcePatterns()
-    {
-        return externalResourcePatterns;
+  public Set<Pattern> getExternalResourcePatterns() {
+    return externalResourcePatterns;
+  }
+
+  public String getExternalResourceUrl() {
+    return externalResourceUrl;
+  }
+
+  public void setExternalResourcePaths(List<String> paths) {
+    Set<Pattern> patterns = new HashSet<Pattern>();
+    for (String path : paths) {
+      patterns.add(Pattern.compile(path));
     }
+    setExternalResourcePatterns(patterns);
+  }
 
-    public String getExternalResourceUrl()
-    {
-        return externalResourceUrl;
-    }
+  public void setExternalResourcePatterns(Set<Pattern> externalResourcePatterns) {
+    this.externalResourcePatterns = Collections.unmodifiableSet(externalResourcePatterns);
+  }
 
-    public void setExternalResourcePaths( List<String> paths )
-    {
-        Set<Pattern> patterns = new HashSet<Pattern>();
-        for ( String path : paths )
-        {
-            patterns.add( Pattern.compile( path ) );
-        }
-        setExternalResourcePatterns( patterns );
-    }
-
-    public void setExternalResourcePatterns( Set<Pattern> externalResourcePatterns )
-    {
-        this.externalResourcePatterns =
-            Collections.unmodifiableSet( externalResourcePatterns );
-    }
-
-    public void setExternalResourceUrl( String externalResourceUrl )
-    {
-        this.externalResourceUrl = externalResourceUrl;
-    }
+  public void setExternalResourceUrl(String externalResourceUrl) {
+    this.externalResourceUrl = externalResourceUrl;
+  }
 }
