@@ -6,4 +6,6 @@ on:
 jobs:
   verify:
     uses: jiaqi/cyclopsgroup/.github/workflows/maven-verify.yml@main
+    with:
+        cmd: mvn -B --update-snapshots verify javadoc:javadoc
 

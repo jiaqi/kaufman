@@ -10,19 +10,16 @@ import org.apache.commons.lang.builder.ToStringBuilder;
  * tests
  */
 public abstract class BaseComparableBean {
-  /** @inheritDoc */
   @Override
   public int hashCode() {
     return HashCodeBuilder.reflectionHashCode(this);
   }
 
-  /** @inheritDoc */
   @Override
   public boolean equals(Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
   }
 
-  /** @inheritDoc */
   @Override
   public String toString() {
     return ToStringBuilder.reflectionToString(this);
