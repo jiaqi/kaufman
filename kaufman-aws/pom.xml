@@ -42,6 +42,6 @@
         </dependency>
     </dependencies>
     <properties>
-        <aws.sdk.version>1.12.99</aws.sdk.version>
+        <aws.sdk.version>1.12.797</aws.sdk.version>
     </properties>
 </project>
