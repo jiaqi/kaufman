@@ -1,9 +1,9 @@
-name: Maven verify
+name: verify
 
 on:
   push:
 
 jobs:
   verify:
-    uses: cyclopsgroup/cyclopsgroup/.github/workflows/maven-verify.yml@main
+    uses: jiaqi/cyclopsgroup/.github/workflows/maven-verify.yml@main
 

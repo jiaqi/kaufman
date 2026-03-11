@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.cyclopsgroup</groupId>
         <artifactId>cyclopsgroup-java-parent</artifactId>
-        <version>0.7.2</version>
+        <version>0.7.3</version>
     </parent>
     <artifactId>kaufman</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -19,12 +19,16 @@
         <url>git@github.com:cyclopsgroup/kaufman.git</url>
     </scm>
     <distributionManagement>
-        <site>
-            <id>cyclopsgroup.server</id>
-            <url>
-                s3://dist.cyclopsgroup.org/projects/kaufman
-            </url>
-        </site>
+        <snapshotRepository>
+        <id>github</id>
+        <name>GitHub jiaqi Apache Maven Packages</name>
+        <url>https://maven.pkg.github.com/jiaqi/kaufman</url>
+        </snapshotRepository>
+        <repository>
+        <id>github</id>
+        <name>GitHub jiaqi Apache Maven Packages</name>
+        <url>https://maven.pkg.github.com/jiaqi/kaufman</url>
+        </repository>
     </distributionManagement>
     <modules>
         <module>kaufman-aws</module>
