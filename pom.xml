@@ -57,6 +57,6 @@
         <module>kaufman-web</module>
     </modules>
     <properties>
-        <org.springframework.version>3.2.0.RELEASE</org.springframework.version>
+        <org.springframework.version>7.0.5</org.springframework.version>
     </properties>
 </project>
